@@ -1,6 +1,6 @@
 {
   "name": "List of Command Lines",
-  "usage":[
+  "usage": [
     {
       "command": "tsh help",
       "description": "search for ass usage and commands"
@@ -14,14 +14,14 @@
       "description": "Display full list of all commands"
     }
   ],
-  "commands":[
+  "commands": [
     {
       "name": "process",
-      "description":"Display full list of all processes"
+      "description": "Display full list of all processes"
     },
     {
       "name": "kill <processId>",
-      "description": "Kill process with id <ProcessId>"
+      "description": "Kill process with id <processId>"
     },
     {
       "name": "installed",
@@ -30,7 +30,7 @@
     {
       "name": "sysinfo",
       "description": "Display full list of system info, including CPU, GPU, RAM, External Drive",
-      "flags":[
+      "flags": [
         {
           "name": "-c",
           "description": "Get full CPU info"
@@ -54,7 +54,12 @@
       "description": "Play some games, ye?"
     },
     {
-      
+      "name": "path/to/exe.exe",
+      "description": "Open executable file"
+    },
+    {
+      "name": "path/to/batch.bat",
+      "description": "Open batch file"
     }
   ]
 }
