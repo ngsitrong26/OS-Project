@@ -1,10 +1,4 @@
 <div id=#top></div>
-## TinyShell
-<br>
-## _Welcome to our TinyShell_
-
-TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -34,6 +28,12 @@ TinyShell is an open-source, basic, simple, user-friendly terminal application l
       <ol>
   </ol>
 </details>
+# TinyShell
+<br>
+## _Welcome to our TinyShell_
+
+TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.
+
 
 ## Aims
 
