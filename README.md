@@ -97,7 +97,7 @@ Shell must wait for the process to finish
 _Example:_
 
 ```sh
-notepad -fore
+run notepad -fore
 ```
 
 #### 2. Background mode
@@ -111,7 +111,7 @@ Shell and process run in parallel
 _Example:_
 
 ```sh
-notepad -back
+run notepad -back
 ```
 
 ### 2. Process management (background mode)
