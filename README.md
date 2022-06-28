@@ -271,5 +271,5 @@ exit
 
 ## Contact
 
-Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)
+Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
