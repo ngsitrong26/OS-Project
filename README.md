@@ -270,7 +270,7 @@ exit
 
 #### And more commands to discover!
 <p align="right">(<a href="#top">back to top</a>)</p>
-## Contact
+<h2 id="Contact"> Contact</h2>
 
 Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
