@@ -7,7 +7,6 @@
 #include "src/commands/cd/cd.h"
 #include "src/commands/time/time.h"
 #include "src/commands/env/env.h"
-#include "src/commands/notepad/notepad.h"
 using std::cin;
 using std::stringstream;
 using std::time_t;
@@ -78,10 +77,6 @@ void start(string *input)
   else if (!cmd.compare("env"))
   {
     env(input);
-  }
-  else if (!cmd.compare("notepad"))
-  {
-    notepad(input);
   }
   else if (!cmd.compare("time"))
   {

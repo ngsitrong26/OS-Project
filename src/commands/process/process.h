@@ -226,7 +226,48 @@ void list()
 
 void run(string *cmd)
 {
-  if (!cmd[1].compare(cmd[1].length() - 4, 4, ".exe"))
+  if (!cmd[1].compare("notepad") || !cmd[1].compare("n"))
+  {
+    if (cmd[2].empty())
+    {
+      cout << "Invalid command: missing <Mode>\n";
+      cout << "To see a list of supported commands, run:\n  run -help\n\n";
+    }
+    else if (!cmd[2].compare("-fore") || !cmd[2].compare("-f"))
+    {
+      fore("C:\\windows\\system32\\notepad.exe");
+    }
+    else if (!cmd[2].compare("-back") || !cmd[2].compare("-b"))
+    {
+      back("C:\\windows\\system32\\notepad.exe");
+    }
+  }
+  else if (!cmd[1].compare("calc") || !cmd[1].compare("c"))
+  {
+    if (cmd[2].empty())
+    {
+      cout << "Invalid command: missing <Mode>\n";
+      cout << "To see a list of supported commands, run:\n  run -help\n\n";
+    }
+    else if (!cmd[2].compare("-fore") || !cmd[2].compare("-f"))
+    {
+      fore("C:\\windows\\system32\\calc.exe");
+    }
+    else if (!cmd[2].compare("-back") || !cmd[2].compare("-b"))
+    {
+      back("C:\\windows\\system32\\calc.exe");
+    }
+  }
+  else if (!cmd[1].compare("-help") || !cmd[1].compare("-h"))
+  {
+    cout << "Usage:\n";
+    cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
+    cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
+    cout << "Options:\n";
+    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "aliases: r\n\n";
+  }
+  else if (!cmd[1].compare(cmd[1].length() - 4, 4, ".exe"))
   {
     if (!cmd[2].empty())
     {
@@ -250,14 +291,10 @@ void run(string *cmd)
       cout << "To see a list of supported commands, run:\n  run -help\n\n";
     }
   }
-  else if (!cmd[1].compare("-help") || !cmd[1].compare("-h"))
+  else
   {
-    cout << "Usage:\n";
-    cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
-    cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
-    cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
-    cout << "aliases: r\n\n";
+    cout << "Unknown command: " << cmd[1] << endl;
+    cout << "To see a list of supported commands, run:\n  run -help\n\n";
   }
 }
 

@@ -102,6 +102,8 @@ void getHelpCmd(string s)
     cout << "Usage:\n";
     cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
     cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
+    cout << format("  run [notepad|n]", 25) << "Run notepad\n\n";
+    cout << format("  run [calc|c]", 25) << "Run calculator\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: r\n\n";
@@ -115,12 +117,11 @@ void getHelpCmd(string s)
 
 string findCmd(string s)
 {
-  string ss[12][3] = {
+  string ss[11][3] = {
       {"help", "h"},
       {"cd"},
       {"cls"},
       {"time", "t"},
-      {"notepad", "n"},
       {"process", "p"},
       {"env", "en", "ev"},
       {"history"},
@@ -149,7 +150,6 @@ void help(string *inputString)
   cmds.insert(std::pair<string, string>("cd", "Get current directory path"));
   cmds.insert(std::pair<string, string>("cls", "Clear screen"));
   cmds.insert(std::pair<string, string>("time", "Display current time"));
-  cmds.insert(std::pair<string, string>("notepad", "Open Notepad"));
   cmds.insert(std::pair<string, string>("process", "Working with processes"));
   cmds.insert(std::pair<string, string>("env", "Working with environment variables"));
   cmds.insert(std::pair<string, string>("history", "Print all used commands"));
