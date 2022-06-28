@@ -82,7 +82,7 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```
       
 In case there are unexpected error, recompile `Tiny.cpp` and run again.
-`Example:` using g++
+_Example:_ using g++
  ```sh
  g++ Tiny.cpp -o Tiny && ./Tiny
  ```
