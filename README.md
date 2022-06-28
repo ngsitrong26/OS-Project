@@ -28,7 +28,7 @@
       <ol>
   </ol>
 </details>
-# TinyShell
+<h1> TinyShell</h1>
 <br>
 ## _Welcome to our TinyShell_
 
