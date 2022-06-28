@@ -215,7 +215,7 @@ cd
 
 #### 2. Change current directory
 
-Change current directory to <Path>
+Change current directory to \<Path\>
 
 ```sh
 cd <Path>
