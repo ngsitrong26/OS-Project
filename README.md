@@ -1,11 +1,11 @@
 <div id=#top></div>
-<div id="TinyShell" align="center">
+<div align="center">
   <a href="https://github.com/Asphode1/TinyShell">
     <img src="src/img/TinyShell.png">
   </a>
   <h2 id="Welcome"> <em>Welcome to our TinyShell</em></h2>
 
-  <p>TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.</p>
+  <p id="TinyShell">TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.</p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -19,38 +19,38 @@
     <li><a href="#Features">Features</a></li>
     <li><a href="#Contributors">Contributors</a></li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#Start">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#pre">Prerequisites</a></li>
+        <li><a href="#ins">Installation</a></li>
       </ul>
     </li>
     <li>
       <a href="#Usage">Usage</a>
       <ol>
-        <li><a href="#1.-Process-Mode">Process Mode</a></li>
-        <li><a href="#2.-Process-management-(background-mode)">Process Management</a></li>
-        <li><a href="#3.-Run-apps/files">Run apps/files</a></li>
-        <li><a href="#4.-Environment-Variables">Environment Variables</a></li>
-        <li><a href="#5.-Dir">Dir</a></li>
-        <li><a href="#6.-Other-commands">Other commands</a></li>
+        <li><a href="#ProcessMode">Process Mode</a></li>
+        <li><a href="#Process">Process Management</a></li>
+        <li><a href="#Run">Run apps/files</a></li>
+        <li><a href="#Environment">Environment Variables</a></li>
+        <li><a href="#Dir">Dir</a></li>
+        <li><a href="#Other">Other commands</a></li>
       <ol>
   </ol>
 </details>
 
-## Aims
+<h2 id="Aims">Aims</h2>
 
 - Study about Windows process management APIs.
 - Understand how to setup and work with Shell.
 
-## Features
+<h2 id="Features">Features</h2>
 
 - Working with process: Create, Stop, Resume and Kill Processes with Foreground and Background Mode
 - Working with Directory Path
 - Working with environment variables
 - Open Notepad, Calculator, executable/batch files, etc
 
-## Contributors:
+<h2 id="Contributors">Contributors</h2>
 
 This program is created by 3 Students of Talented in Computer Science - K65, HUST
 
@@ -59,13 +59,13 @@ This program is created by 3 Students of Talented in Computer Science - K65, HUS
 - [Mai Trung Kiên](mailto:kien.mt200301@sis.hust.edu.vn)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Getting Started
+<h2 id="Start">Getting Started</h2>
 
-### Prerequisites
+<h3 id="pre">Prerequisites</h3>
 
 The program works in Windows Machine with a C++ compiler installed ([MinGW](https://sourceforge.net/projects/mingw/), [VC++](https://visualstudio.microsoft.com/vs/features/cplusplus/) or [Clang](https://clang.llvm.org/)) with standard C++11 or higher.
 
-### Instalation
+<h3 id="ins">Instalation</h3>
 
 To run this program, download this repository from Github.
 If you have [Git](https://git-scm.com/) installed, you can clone this repository to your machine:
@@ -89,9 +89,9 @@ _Example:_ using g++
 
 <p align="right">(<a href="#top">back to top</a>)</p>
       
-## Usage
+<h2 id="Usage">Usage</h2>
 
-### 1. Process Mode
+<h3 id="ProcessMode">1. Process Mode</h3>
 
 #### 1. Foreground mode
 
@@ -121,7 +121,7 @@ _Example:_
 run notepad -back
 ```
 
-### 2. Process management (background mode)
+<h3 id="Process">2. Process management (background mode)</h3>
 
 #### 1. List
 
@@ -161,7 +161,7 @@ To kill all processes:
 process [kill|k] [-all|-a]
 ```
 
-### 3. Run apps/files
+<h3 id="Run">3. Run apps/files</h3>
 
 Run Notepad with mode:
 
@@ -181,7 +181,7 @@ Run executable/batch file with mode:
 run path/to/file <Mode>
 ```
 
-### 4. Environment Variables
+<h3 id="Environment">4. Environment Variables</h3>
 
 #### 1. Show environment variables
 
@@ -213,7 +213,7 @@ Delete existing environment variable
 env [delete|del|d] <Name>
 ```
 
-### 5. Dir
+<h3 id="Dir">5. Dir</h3>
 
 #### 1. cd
 
@@ -245,7 +245,7 @@ Reset current directory to the Initial Path
 cd [reset|r]
 ```
 
-### 6. Other commands
+<h3 id="Other">6. Other commands</h3>
 
 #### 1. Show command history
 
