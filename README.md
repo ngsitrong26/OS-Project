@@ -54,6 +54,7 @@ This program is created by 3 Students of Talented in Computer Science - K65, HUS
 - [Hồ Viết Đức Lương](mailto:luong.hvd200376@sis.hust.edu.vn)
 - [Nguyễn Duy Long](mailto:long.nd204580@sis.hust.edu.vn)
 - [Mai Trung Kiên](mailto:kien.mt200301@sis.hust.edu.vn)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -76,7 +77,7 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```cmd
 ./Tiny
 ```
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## Usage
 
 ### 1. Process Mode
@@ -268,8 +269,9 @@ exit
 ```
 
 #### And more commands to discover!
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## Contact
 
 Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
+<p align="right">(<a href="#top">back to top</a>)</p>
