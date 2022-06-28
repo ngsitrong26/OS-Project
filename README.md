@@ -78,6 +78,7 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ./Tiny
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
+      
 ## Usage
 
 ### 1. Process Mode
