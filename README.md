@@ -1,11 +1,11 @@
 <div id=#top></div>
-<div align="center">
+<div  id="TinyShell" align="center">
   <a href="https://github.com/Asphode1/TinyShell">
     <img src="src/img/TinyShell.png">
   </a>
   <h2 id="Welcome"> <em>Welcome to our TinyShell</em></h2>
 
-  <p id="TinyShell">TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.</p>
+  <p>TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.</p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
