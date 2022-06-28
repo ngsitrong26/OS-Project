@@ -3,7 +3,7 @@
   "usage": [
     {
       "command": "tsh help",
-      "description": "search for ass usage and commands"
+      "description": "search for all usage and commands"
     },
     {
       "command": "tsh <command> -h",
