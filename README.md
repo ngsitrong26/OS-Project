@@ -1,6 +1,7 @@
 <div id=#top></div>
-# TinyShell
-## _Welcome to our TinyShell_
+
+<h1 id="TinyShell"> TinyShell</h1>
+<h2 id="Welcome"> <em>Welcome to our TinyShell</em></h2>
 
 TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.
 
@@ -53,6 +54,7 @@ This program is created by 3 Students of Talented in Computer Science - K65, HUS
 - [Hồ Viết Đức Lương](mailto:luong.hvd200376@sis.hust.edu.vn)
 - [Nguyễn Duy Long](mailto:long.nd204580@sis.hust.edu.vn)
 - [Mai Trung Kiên](mailto:kien.mt200301@sis.hust.edu.vn)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -75,7 +77,8 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```cmd
 ./Tiny
 ```
-
+<p align="right">(<a href="#top">back to top</a>)</p>
+      
 ## Usage
 
 ### 1. Process Mode
@@ -212,7 +215,7 @@ cd
 
 #### 2. Change current directory
 
-Change current directory to <Path>
+Change current directory to \<Path\>
 
 ```sh
 cd <Path>
@@ -267,8 +270,9 @@ exit
 ```
 
 #### And more commands to discover!
+<p align="right">(<a href="#top">back to top</a>)</p>
+<h2 id="Contact"> Contact</h2>
 
-## Contact
-
-Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)
+Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
+<p align="right">(<a href="#top">back to top</a>)</p>
