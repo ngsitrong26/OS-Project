@@ -80,6 +80,13 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```cmd
 ./Tiny
 ```
+      
+In case there are unexpected error, recompile `Tiny.cpp` and run again.
+`Example:` using g++
+ ```sh
+ g++ Tiny.cpp -o Tiny && ./Tiny
+ ```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
       
 ## Usage
