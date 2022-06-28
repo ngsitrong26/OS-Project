@@ -1,4 +1,11 @@
 <div id=#top></div>
+
+<h1 id="TinyShell"> TinyShell</h1>
+<br>
+      <h2 id="Welcome"> _Welcome to our TinyShell_</h2>
+
+TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -28,12 +35,6 @@
       <ol>
   </ol>
 </details>
-<h1> TinyShell</h1>
-<br>
-## _Welcome to our TinyShell_
-
-TinyShell is an open-source, basic, simple, user-friendly terminal application like Command Prompt, PowerShell. Its main features include working with process, running executable/batch files, and more to discover.
-
 
 ## Aims
 
