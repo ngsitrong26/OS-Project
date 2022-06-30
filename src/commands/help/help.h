@@ -4,7 +4,6 @@
 #include <string>
 #include <algorithm>
 #include <map>
-using std::cout;
 using std::endl;
 using std::string;
 
@@ -36,14 +35,6 @@ void getHelpCmd(string s)
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: t\n";
-  }
-  else if (!s.compare("notepad"))
-  {
-    cout << "Usage:\n";
-    cout << format("  notepad", 15) << "Open Notepad\n";
-    cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
-    cout << "aliases: n, np\n";
   }
   else if (!s.compare("process"))
   {
@@ -101,8 +92,8 @@ void getHelpCmd(string s)
   {
     cout << "Usage:\n";
     cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
-    cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
-    cout << format("  run [notepad|n]", 25) << "Run notepad\n\n";
+    cout << format("  run <Path/to/bat>", 25) << "Run batch file\n";
+    cout << format("  run [notepad|n]", 25) << "Run notepad\n";
     cout << format("  run [calc|c]", 25) << "Run calculator\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
@@ -117,7 +108,7 @@ void getHelpCmd(string s)
 
 string findCmd(string s)
 {
-  string ss[11][3] = {
+  string ss[12][3] = {
       {"help", "h"},
       {"cd"},
       {"cls"},
@@ -129,7 +120,7 @@ string findCmd(string s)
       {"exit", "e"},
       {"tiny"},
       {"run", "r"}};
-  for (int i = 0; i < 12; i++)
+  for (int i = 0; i < 11; i++)
   {
     int j = 0;
     while (!ss[i][j].empty() && j < 3)

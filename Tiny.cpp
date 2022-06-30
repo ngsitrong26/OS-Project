@@ -99,6 +99,7 @@ void start(string *input)
 
 int main()
 {
+  signal(SIGINT, signHandler);
   string currentDir;
   vector<string> history;
   greed();
@@ -116,10 +117,10 @@ int main()
       cout << "Tiny Shell";
       setConsoleColor(FOREGROUND_WHITE);
       cout << "!\n\n";
-      sleep(2);
+      sleep(1);
       break;
     }
-    if (!input.compare("history"))
+    else if (!input.compare("history"))
     {
       if (history.empty())
       {
@@ -147,7 +148,7 @@ int main()
       system("cls");
       greed();
     }
-    else
+    else if (!input.empty())
     {
       history.push_back(input);
       string inputData[10];

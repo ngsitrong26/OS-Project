@@ -261,6 +261,8 @@ void run(string *cmd)
   else if (!cmd[1].compare("-help") || !cmd[1].compare("-h"))
   {
     cout << "Usage:\n";
+    cout << format("  run [notepad|n]", 25) << "Run notepad\n";
+    cout << format("  run [calc|c]", 25) << "Run calculator\n";
     cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
     cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
     cout << "Options:\n";

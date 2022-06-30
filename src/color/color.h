@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <windows.h>
+using std::cout;
 
 const unsigned short FOREGROUND_BRIGHT_WHITE = FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY;
 const unsigned short FOREGROUND_WHITE = FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED;
@@ -13,7 +14,7 @@ const unsigned short BRIGHT_YELLOW = FOREGROUND_GREEN | FOREGROUND_RED | FOREGRO
 void setConsoleColor(unsigned short colour)
 {
   static const HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-  std::cout.flush();
+  cout.flush();
   SetConsoleTextAttribute(hOut, colour);
 }
 
