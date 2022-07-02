@@ -219,7 +219,10 @@ void list()
     else
     {
       string stat((status[i] == 0) ? "Stopped" : "Running");
-      cout << format(to_string(i + 1), 8) << format(to_string(pi[i].dwProcessId), 12) << pi[i].hProcess << format(" ", 7) << stat << format(" ", 4) << cString[i] << endl;
+      std::ostringstream ss;
+      ss << std::hex << pi[i].hProcess;
+      string hProcess = ss.str();
+      cout << format(to_string(i + 1), 8) << format(to_string(pi[i].dwProcessId), 12) << format(hProcess, 12) << format(stat, 12) << cString[i] << endl;
     }
   }
 }
