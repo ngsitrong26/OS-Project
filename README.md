@@ -36,7 +36,7 @@
         <li><a href="#Other">Other commands</a></li>
       </ol>
     <li><a href="#Issues">Issues</a></li>
-    <li><a href="#Contact">Contributors</a></li>
+    <li><a href="#Contact">Contact</a></li>
   </ol>
 </details>
 
