@@ -309,6 +309,6 @@ _Example:_ using g++
 
 <h2 id="Contact"> Contact</h2>
 
-Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
+Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](mailto:kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
 <p align="right">(<a href="#top">back to top</a>)</p>
