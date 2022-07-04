@@ -6,7 +6,7 @@ void game(string *input)
   if (input[2].empty())
   {
     if (!input[1].compare("-fore") || !input[1].compare("-f") || !input[1].compare("-back") || !input[1].compare("-b"))
-      runExe(rootDir + "\\tic_tac_toe\\tic_tac_toe.exe", input[1]);
+      runExe(rootDir + "\\tic_tac_toe\\TheImpossibleTicTacToe.exe", input[1]);
     else if (!input[1].compare("-h") || !input[1].compare("-help"))
     {
       cout << "Usage:\n";
