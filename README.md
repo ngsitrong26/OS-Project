@@ -34,7 +34,9 @@
         <li><a href="#Environment">Environment Variables</a></li>
         <li><a href="#Dir">Dir</a></li>
         <li><a href="#Other">Other commands</a></li>
-      <ol>
+      </ol>
+    <li><a href="#Issues">Issues</a></li>
+    <li><a href="#Contact">Contact</a></li>
   </ol>
 </details>
 
@@ -80,12 +82,6 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```cmd
 ./Tiny
 ```
-      
-In case there are unexpected error, recompile `Tiny.cpp` and run again.
-_Example:_ using g++
- ```sh
- g++ Tiny.cpp -o Tiny && ./Tiny
- ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
       
@@ -280,9 +276,39 @@ exit
 ```
 
 #### And more commands to discover!
+
 <p align="right">(<a href="#top">back to top</a>)</p>
+<h2 id="Issues">Issues</h2>
+<h3>a. Error on running the program</h3>
+
+Recompile `Tiny.cpp` with flag `-std=c++11` and run again.</br>
+
+_Example:_ using g++
+ ```sh
+ g++ -std=c++11 Tiny.cpp -o Tiny && ./Tiny
+ ```
+<h3>b. Error on running countdown clock</h3>
+
+Recompile `src/commands/time/countDown.cpp` with flag `-std=c++11` and try again</br>
+
+_Example:_ using g++
+ ```sh
+ g++ -std=c++11 src/commands/time/countDown.cpp -o src/commands/time/countDown
+ ```
+
+<h3>c. Error on running The Impossible Tic Tac Toe game</h3>
+
+Recompile `tic_tac_toe/TheImpossibleTicTacToe.cpp` with flag `-std=c++11` and try again</br>
+
+_Example:_ using g++
+ ```sh
+ g++ -std=c++11 tic_tac_toe/TheImpossibleTicTacToe.cpp -o tic_tac_toe/TheImpossibleTicTacToe
+ ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <h2 id="Contact"> Contact</h2>
 
-Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](kien.mai191618@gmail.com)<br>
+Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](mailto:kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
 <p align="right">(<a href="#top">back to top</a>)</p>
