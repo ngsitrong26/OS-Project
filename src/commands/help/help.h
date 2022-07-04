@@ -99,6 +99,13 @@ void getHelpCmd(string s)
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: r\n\n";
   }
+  else if (!s.compare("game"))
+  {
+    cout << "Usage:\n";
+    cout << format("  game", 15) << "Play The Impossible Tic Tac Toe\n\n";
+    cout << "Options:\n";
+    cout << "[-fore|-f][-back|b]\n[-h|help]\n\n";
+  }
   else
   {
     cout << "Unknown command: \"" << s << "\"\n\n";
@@ -119,8 +126,9 @@ string findCmd(string s)
       {"clear", "c"},
       {"exit", "e"},
       {"tiny"},
-      {"run", "r"}};
-  for (int i = 0; i < 11; i++)
+      {"run", "r"},
+      {"game"}};
+  for (int i = 0; i < 12; i++)
   {
     int j = 0;
     while (!ss[i][j].empty() && j < 3)
@@ -148,6 +156,7 @@ void help(string *inputString)
   cmds.insert(std::pair<string, string>("exit", "Exit TinyShell"));
   cmds.insert(std::pair<string, string>("tiny", "More information about Tiny Shell on GitHub"));
   cmds.insert(std::pair<string, string>("run", "Run executable/batch file"));
+  cmds.insert(std::pair<string, string>("game", "Play The Impossible Tic Tac Toe"));
   if (inputString[1].empty())
   {
     for (auto const &x : cmds)

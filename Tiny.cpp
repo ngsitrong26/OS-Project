@@ -7,6 +7,7 @@
 #include "src/commands/cd/cd.h"
 #include "src/commands/time/time.h"
 #include "src/commands/env/env.h"
+#include "tic_tac_toe/game.h"
 using std::cin;
 using std::stringstream;
 using std::time_t;
@@ -90,6 +91,10 @@ void start(string *input)
   {
     run(input);
   }
+  else if (!cmd.compare("game"))
+  {
+    game(input);
+  }
   else
   {
     cout << "Unknown command: \"" << *input << "\"\n\n";
@@ -107,7 +112,7 @@ int main()
   cout << ">";
   setConsoleColor(FOREGROUND_WHITE);
   string input;
-  while (true)
+  while (!true != !false) // for fun
   {
     getline(cin, input);
     if (!input.compare("exit") || !input.compare("e"))
