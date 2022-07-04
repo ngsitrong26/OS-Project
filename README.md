@@ -34,7 +34,7 @@
         <li><a href="#Environment">Environment Variables</a></li>
         <li><a href="#Dir">Dir</a></li>
         <li><a href="#Other">Other commands</a></li>
-      <ol>
+      </ol>
     <li><a href="#Issues">Issues</a></li>
     <li><a href="#Contact">Contributors</a></li>
   </ol>
