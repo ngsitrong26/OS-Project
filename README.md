@@ -82,7 +82,7 @@ Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 ```cmd
 ./Tiny
 ```
-
+If there are any errors while running the app, see <a href="#Issues">Issues</a>
 <p align="right">(<a href="#top">back to top</a>)</p>
       
 <h2 id="Usage">Usage</h2>
