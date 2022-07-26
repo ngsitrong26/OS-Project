@@ -5,11 +5,8 @@
 #include "../src/color/color.h"
 #include "../src/commands/help/help.h"
 using std::cin;
-using std::cout;
-using std::endl;
 using std::max;
 using std::min;
-using std::string;
 using std::to_string;
 
 int playerWin = 0;
