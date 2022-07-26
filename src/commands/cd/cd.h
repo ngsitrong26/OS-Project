@@ -91,7 +91,7 @@ void cd(string *cmd)
     cout << format("cd <Path>", 15) << "Change current directory to <Path>" << endl;
     cout << format("cd [reset|r]", 15) << "Change current directory to the initial Path" << endl;
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
   }
   else
   {

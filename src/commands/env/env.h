@@ -105,7 +105,7 @@ void env(string *cmd)
     cout << format("env [add|a] <Id> <Value>", 30) << "Add the environment variable <Id> with its value <Value>,\n";
     cout << format("env [del|d|delete] <Id>", 30) << "Delete the environment variable <Id>\n\n";
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
     cout << "aliases: en, ev\n";
   }
   else if (!cmd[1].compare("add") || !cmd[1].compare("a"))

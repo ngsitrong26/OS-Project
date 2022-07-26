@@ -1,0 +1,4 @@
+run notepad -back
+run runTest.bat
+time countdown -back
+process list

@@ -25,13 +25,13 @@ void getHelpCmd(string s)
     cout << format("  cd <Path>", 15) << "Change current directory to <Path>" << endl;
     cout << format("  cd [reset|r]", 15) << "Change current directory to the initial Path" << endl;
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
   }
   else if (!s.compare("time"))
   {
     cout << "Usage:\n";
-    cout << format("  time", 20) << "Display current date and time\n\n";
-    cout << format("  time [countdown|c]", 20) << "Run countdown clock\n\n";
+    cout << format("  time", 25) << "Display current date and time\n";
+    cout << format("  time [countdown|c]", 25) << "Run countdown clock with mode\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: t\n";
@@ -45,7 +45,7 @@ void getHelpCmd(string s)
     cout << format("  process [kill|k] <Id>", 30) << "Kill process with id <Id>\n";
     cout << format("  process [kill|k] [-a|-all]", 30) << "Kill all process\n\n";
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
     cout << "aliases: p\n";
   }
   else if (!s.compare("env"))
@@ -56,7 +56,7 @@ void getHelpCmd(string s)
     cout << format("  env [add|a] <Id> <Value>", 30) << "Add the environment variable <Id> with its value <Value>,\n";
     cout << format("  env [del|d|delete] <Id>", 30) << "Delete the environment variable <Id>\n\n";
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
     cout << "aliases: en, ev\n";
   }
   else if (!s.compare("history"))
@@ -93,6 +93,7 @@ void getHelpCmd(string s)
     cout << "Usage:\n";
     cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
     cout << format("  run <Path/to/bat>", 25) << "Run batch file\n";
+    cout << format("  run <Path/to/txt>", 25) << "Run list of commands saved in an text file\n";
     cout << format("  run [notepad|n]", 25) << "Run notepad\n";
     cout << format("  run [calc|c]", 25) << "Run calculator\n\n";
     cout << "Options:\n";

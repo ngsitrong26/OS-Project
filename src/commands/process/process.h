@@ -5,6 +5,8 @@
 #include <ctime>
 #include <unistd.h>
 #include <signal.h>
+using std::getline;
+using std::ifstream;
 using std::to_string;
 
 PROCESS_INFORMATION pi[100];
@@ -227,6 +229,31 @@ void list()
   }
 }
 
+void runTxt(string path)
+{
+  void start(string * input);
+  string *getInput(string input, string * inputData);
+  ifstream file(path);
+  if (file.is_open())
+  {
+    {
+      string line;
+      string inputData[10];
+      auto inputDat = getInput(line, inputData);
+      while (getline(file, line))
+      {
+        string inputData[10];
+        auto inputDat = getInput(line, inputData);
+        cout << line << endl;
+        start(inputDat);
+        cout << "> done" << endl;
+      }
+    }
+  }
+  else
+    cout << "File \"" << path << "\" do not exist.\n\n";
+}
+
 void run(string *cmd)
 {
   if (!cmd[1].compare("notepad") || !cmd[1].compare("n"))
@@ -267,7 +294,8 @@ void run(string *cmd)
     cout << format("  run [notepad|n]", 25) << "Run notepad\n";
     cout << format("  run [calc|c]", 25) << "Run calculator\n";
     cout << format("  run <Path/to/exe>", 25) << "Run executable file\n";
-    cout << format("  run <Path/to/bat>", 25) << "Run batch file\n\n";
+    cout << format("  run <Path/to/bat>", 25) << "Run batch file with no mode\n";
+    cout << format("  run <Path/to/txt>", 25) << "Run list of commands saved in an text file\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: r\n\n";
@@ -289,6 +317,18 @@ void run(string *cmd)
     if (cmd[2].empty())
     {
       runBat(cmd[1]);
+    }
+    else
+    {
+      cout << "Unknown command: " << cmd[2] << endl;
+      cout << "To see a list of supported commands, run:\n  run -help\n\n";
+    }
+  }
+  else if (!cmd[1].compare(cmd[1].length() - 4, 4, ".txt"))
+  {
+    if (cmd[2].empty())
+    {
+      runTxt(cmd[1]);
     }
     else
     {
@@ -396,7 +436,7 @@ void process(string *cmd)
     cout << format("  process [kill|k] <Id>", 30) << "Kill process with id <Id>\n";
     cout << format("  process [kill|k] [-a|-all]", 30) << "Kill all process\n\n";
     cout << "Options:\n";
-    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "[-h|-help]\n\n";
     cout << "aliases: p\n";
   }
   else

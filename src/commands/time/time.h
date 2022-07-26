@@ -87,6 +87,15 @@ void time(string *cmd)
   {
     countDown(cmd[2]);
   }
+  else if (!cmd[1].compare("-h"))
+  {
+    cout << "Usage:\n";
+    cout << format("  time", 25) << "Display current date and time\n";
+    cout << format("  time [countdown|c]", 25) << "Run countdown clock\n\n";
+    cout << "Options:\n";
+    cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
+    cout << "aliases: t\n";
+  }
   else
   {
     cout << "Unknown command: \"" << cmd[1] << "\"\n\n";
