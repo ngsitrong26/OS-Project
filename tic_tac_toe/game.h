@@ -16,14 +16,14 @@ void game(string *input)
     }
     else
     {
-      cout << "Unknown command: \"" << input[1] << "\"\n\n";
-      cout << "To see a list of supported commands, run:\n  process -help\n\n";
+      cout << "Unknown command: missing mode.\n\n";
+      cout << "To see a list of supported commands, run:\n  game -help\n\n";
     }
   }
   else
   {
     cout << "Unknown command: \"" << input[2] << "\"\n\n";
-    cout << "To see a list of supported commands, run:\n  process -help\n\n";
+    cout << "To see a list of supported commands, run:\n  game -help\n\n";
   }
 }
 

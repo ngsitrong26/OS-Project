@@ -148,7 +148,7 @@ void env(string *cmd)
   {
     if (!cmd[2].empty())
     {
-      cout << "Unknown command: \"" << cmd[2] << "\"\n\n";
+      cout << "Invalid command\"\n\n";
       cout << "To see a list of supported commands, run:\n  env -help\n\n";
     }
     else

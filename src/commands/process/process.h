@@ -256,7 +256,12 @@ void runTxt(string path)
 
 void run(string *cmd)
 {
-  if (!cmd[1].compare("notepad") || !cmd[1].compare("n"))
+  if (cmd[1].empty())
+  {
+    cout << "Invalid command." << endl;
+    cout << "To see a list of supported commands, run:\n  run -help\n\n";
+  }
+  else if (!cmd[1].compare("notepad") || !cmd[1].compare("n"))
   {
     if (cmd[2].empty())
     {
