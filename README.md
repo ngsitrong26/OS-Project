@@ -72,14 +72,14 @@ The program works in Windows Machine with a C++ compiler installed ([MinGW](http
 To run this program, download this repository from Github.
 If you have [Git](https://git-scm.com/) installed, you can clone this repository to your machine:
 
-```sh
+```txt
 git clone https://github.com/Asphode1/TinyShell.git
 cd TinyShell
 ```
 
 Run `Tiny.exe` directly from Windows Explorer or using Command Prompt:
 
-```cmd
+```txt
 ./Tiny
 ```
 If there are any errors while running the app, see <a href="#Issues">Issues</a>
@@ -93,13 +93,13 @@ If there are any errors while running the app, see <a href="#Issues">Issues</a>
 
 Shell must wait for the process to finish
 
-```sh
+```txt
 <Command> [-fore|-f]
 ```
 
 _Example:_
 
-```sh
+```txt
 run notepad -fore
 ```
 
@@ -107,13 +107,13 @@ run notepad -fore
 
 Shell and process run in parallel
 
-```sh
+```txt
 <Command> [-back|-b]
 ```
 
 _Example:_
 
-```sh
+```txt
 run notepad -back
 ```
 
@@ -123,7 +123,7 @@ run notepad -back
 
 Print out list of the processes (process Id, Cmd name, status)
 
-```sh
+```txt
 process [list|l]
 ```
 
@@ -131,7 +131,7 @@ process [list|l]
 
 Stop a running process
 
-```sh
+```txt
 process [stop|s] <Id>
 ```
 
@@ -139,7 +139,7 @@ process [stop|s] <Id>
 
 Resume a stopped process
 
-```sh
+```txt
 process [resume|r] <Id>
 ```
 
@@ -147,13 +147,13 @@ process [resume|r] <Id>
 
 Kill a process:
 
-```sh
+```txt
 process [kill|k] <Id>
 ```
 
 To kill all processes:
 
-```sh
+```txt
 process [kill|k] [-all|-a]
 ```
 
@@ -161,19 +161,19 @@ process [kill|k] [-all|-a]
 
 Run Notepad with mode:
 
-```sh
+```txt
 run notepad <Mode>
 ```
 
 Run Calculator with mode:
 
-```sh
+```txt
 run calc <Mode>
 ```
 
 Run executable/batch file with mode:
 
-```sh
+```txt
 run path/to/file <Mode>
 ```
 
@@ -183,13 +183,13 @@ run path/to/file <Mode>
 
 Display the value of an environment variable
 
-```sh
+```txt
 env <Id>
 ```
 
 To print list of environment variables:
 
-```sh
+```txt
 env [list|l]
 ```
 
@@ -197,7 +197,7 @@ env [list|l]
 
 Add new environment variable
 
-```sh
+```txt
 env [add|a] <Name> <Value>
 ```
 
@@ -205,7 +205,7 @@ env [add|a] <Name> <Value>
 
 Delete existing environment variable
 
-```sh
+```txt
 env [delete|del|d] <Name>
 ```
 
@@ -215,7 +215,7 @@ env [delete|del|d] <Name>
 
 Show list contents of the current directory
 
-```sh
+```txt
 cd
 ```
 
@@ -223,13 +223,13 @@ cd
 
 Change current directory to \<Path\>
 
-```sh
+```txt
 cd <Path>
 ```
 
 Change current directory to its parent directory:
 
-```sh
+```txt
 cd ..
 ```
 
@@ -237,7 +237,7 @@ cd ..
 
 Reset current directory to the Initial Path
 
-```sh
+```txt
 cd [reset|r]
 ```
 
@@ -245,13 +245,13 @@ cd [reset|r]
 
 #### 1. Show command history
 
-```sh
+```txt
 history
 ```
 
 To clear command history:
 
-```sh
+```txt
 clear
 ```
 
@@ -259,19 +259,19 @@ clear
 
 Display current date and time
 
-```sh
+```txt
 time
 ```
 
 Run countdown program (With mode):
 
-```sh
+```txt
 time [countdown|c] <Mode>
 ```
 
 #### 3. Exit TinyShell
 
-```sh
+```txt
 exit
 ```
 
@@ -284,7 +284,7 @@ exit
 Recompile `Tiny.cpp` with flag `-std=c++11` and run again.</br>
 
 _Example:_ using g++
- ```sh
+ ```txt
  g++ -std=c++11 Tiny.cpp -o Tiny && ./Tiny
  ```
 <h3>b. Error on running countdown clock</h3>
@@ -292,7 +292,7 @@ _Example:_ using g++
 Recompile `src/commands/time/countDown.cpp` with flag `-std=c++11` and try again</br>
 
 _Example:_ using g++
- ```sh
+ ```txt
  g++ -std=c++11 src/commands/time/countDown.cpp -o src/commands/time/countDown
  ```
 
@@ -301,7 +301,7 @@ _Example:_ using g++
 Recompile `tic_tac_toe/TheImpossibleTicTacToe.cpp` with flag `-std=c++11` and try again</br>
 
 _Example:_ using g++
- ```sh
+ ```txt
  g++ -std=c++11 tic_tac_toe/TheImpossibleTicTacToe.cpp -o tic_tac_toe/TheImpossibleTicTacToe
  ```
 
