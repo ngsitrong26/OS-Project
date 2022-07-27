@@ -279,7 +279,7 @@ exit
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <h2 id="Issues">Issues</h2>
-<h3>a. Error on running the program</h3>
+<h3>a. Error when running the program</h3>
 
 Recompile `Tiny.cpp` with flag `-std=c++11` and run again.</br>
 
@@ -287,7 +287,7 @@ _Example:_ using g++
  ```txt
  g++ -std=c++11 Tiny.cpp -o Tiny && ./Tiny
  ```
-<h3>b. Error on running countdown clock</h3>
+<h3>b. Error when running countdown clock</h3>
 
 Recompile `src/commands/time/countDown.cpp` with flag `-std=c++11` and try again</br>
 
@@ -296,7 +296,7 @@ _Example:_ using g++
  g++ -std=c++11 src/commands/time/countDown.cpp -o src/commands/time/countDown
  ```
 
-<h3>c. Error on running The Impossible Tic Tac Toe game</h3>
+<h3>c. Error when running The Impossible Tic Tac Toe game</h3>
 
 Recompile `tic_tac_toe/TheImpossibleTicTacToe.cpp` with flag `-std=c++11` and try again</br>
 
