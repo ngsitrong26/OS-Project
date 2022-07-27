@@ -91,7 +91,7 @@ void time(string *cmd)
   {
     cout << "Usage:\n";
     cout << format("  time", 25) << "Display current date and time\n";
-    cout << format("  time [countdown|c]", 25) << "Run countdown clock\n\n";
+    cout << format("  time [countdown|c]", 25) << "Run countdown clock with mode\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: t\n";

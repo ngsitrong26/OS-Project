@@ -5,6 +5,7 @@
 #include <ctime>
 #include <unistd.h>
 #include <signal.h>
+using std::exception;
 using std::getline;
 using std::ifstream;
 using std::to_string;
@@ -36,31 +37,60 @@ void signHandler(int signum)
 // Process Kill
 void kill(string s)
 {
-  unsigned long id = std::stoul(s);
   bool isNotExist = 1;
-  for (int i = 0; i < n; i++)
+  try
   {
-    if (pi[i].dwProcessId == id)
+    unsigned long id = std::stoul(s);
+    for (int i = 0; i < n; i++)
     {
-      TerminateProcess(pi[i].hProcess, 0);
-      CloseHandle(pi[i].hThread);
-      CloseHandle(pi[i].hProcess);
-      cout << "Process " << cString[i] << " killed successfully\n\n";
-      for (int j = i; j < n; j++)
+      if (pi[i].dwProcessId == id)
       {
-        status[j] = status[j + 1];
-        pi[j] = pi[j + 1];
-        si[j] = si[j + 1];
-        cString[j] = cString[j + 1];
+        TerminateProcess(pi[i].hProcess, 0);
+        CloseHandle(pi[i].hThread);
+        CloseHandle(pi[i].hProcess);
+        cout << "Process " << s << " killed successfully\n\n";
+        for (int j = i; j < n; j++)
+        {
+          status[j] = status[j + 1];
+          pi[j] = pi[j + 1];
+          si[j] = si[j + 1];
+          cString[j] = cString[j + 1];
+        }
+        n--;
+        isNotExist = 0;
+        break;
       }
-      n--;
-      isNotExist = 0;
-      break;
+    }
+  }
+  catch (exception &e)
+  {
+    for (int i = 0; i < n; i++)
+    {
+      string name(cString[i]);
+      if (!name.compare(s))
+      {
+        TerminateProcess(pi[i].hProcess, 0);
+        CloseHandle(pi[i].hThread);
+        CloseHandle(pi[i].hProcess);
+        for (int j = i; j < n; j++)
+        {
+          status[j] = status[j + 1];
+          pi[j] = pi[j + 1];
+          si[j] = si[j + 1];
+          cString[j] = cString[j + 1];
+        }
+        n--;
+        isNotExist = 0;
+      }
+    }
+    if (!isNotExist)
+    {
+      cout << "All process with name \"" << s << "\" killed successfullly";
     }
   }
   if (isNotExist)
   {
-    cout << "No process with id " << id << "\n\n";
+    cout << "No process with id of name equals \"" << s << "\"\n\n";
   }
 }
 
@@ -87,61 +117,108 @@ void killAll()
 // Stop process
 void stop(string s)
 {
-  unsigned long id = std::stoul(s);
   int isNotExist = 1;
-  for (int i = 0; i < n; i++)
+  try
   {
-    if (pi[i].dwProcessId == id)
+    unsigned long id = std::stoul(s);
+    for (int i = 0; i < n; i++)
     {
-      isNotExist = 0;
-      if (status[i] == 1)
+      if (pi[i].dwProcessId == id)
       {
-        status[i] = 0;
-        cout << "Process " << id << " stopped.\n\n";
-        SuspendThread(pi[i].hThread);
-        break;
-      }
-      else
-      {
-        cout << "Process " << cString[i] << " is already stopped\n\n";
-        break;
+        isNotExist = 0;
+        if (status[i] == 1)
+        {
+          status[i] = 0;
+          cout << "Process " << id << " stopped.\n\n";
+          SuspendThread(pi[i].hThread);
+        }
+        else
+        {
+          cout << "Process " << id << " is already stopped\n\n";
+        }
       }
     }
   }
+  catch (exception &e)
+  {
+    bool stopped = false;
+    for (int i = 0; i < n; i++)
+    {
+      string name(cString[i]);
+      if (!name.compare(s))
+      {
+        isNotExist = 0;
+        if (status[i] == 1)
+        {
+          stopped = true;
+          status[i] = 0;
+          SuspendThread(pi[i].hThread);
+        }
+      }
+    }
+    if (stopped)
+      cout << "All process with name \"" << s << "\" stopped.\n\n";
+    else
+      cout << "Process \"" << s << "\" is already stopped or does not exist.\n\n";
+  }
   if (isNotExist)
   {
-    cout << "No process with id " << id << endl
-         << endl;
+    cout << "No process with id or name equals \"" << s << "\"\n\n";
   }
 }
 
 // Resume process
 void resume(string s)
 {
-  unsigned long id = std::stoul(s);
   int isNotExist = 1;
-  for (int i = 0; i < n; ++i)
+  try
   {
-    if (pi[i].dwProcessId == id)
+    unsigned long id = std::stoul(s);
+    for (int i = 0; i < n; ++i)
     {
-      isNotExist = 0;
-      if (status[i] == 0)
+      if (pi[i].dwProcessId == id)
       {
-        status[i] = 1;
-        cout << "Process " << cString[i] << " resumed successfully\n\n";
-        ResumeThread(pi[i].hThread);
-        break;
-      }
-      else
-      {
-        cout << "Process " << cString[i] << " is still running\n\n";
-        break;
+        isNotExist = 0;
+        if (status[i] == 0)
+        {
+          status[i] = 1;
+          cout << "Process " << id << " resumed successfully\n\n";
+          ResumeThread(pi[i].hThread);
+          break;
+        }
+        else
+        {
+          cout << "Process " << id << " is still running\n\n";
+          break;
+        }
       }
     }
   }
+  catch (exception &e)
+  {
+    bool resumed = false;
+    for (int i = 0; i < n; i++)
+    {
+      string name(cString[i]);
+      if (!name.compare(s))
+      {
+        isNotExist = 0;
+        if (status[i] == 0)
+        {
+          resumed = true;
+          status[i] = 1;
+          ResumeThread(pi[i].hThread);
+        }
+      }
+    }
+    if (resumed)
+      cout << "All process with name \"" << s << "\" resumed successfully.\n\n";
+    else
+      cout << "Process \"" << s << "\" is still running or does not exist.\n\n";
+  }
   if (isNotExist)
   {
-    cout << "No process with id " << id << "\n\n";
+    cout << "No process with id or name equals \"" << s << "\"\n\n";
   }
 }
 

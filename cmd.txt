@@ -1,5 +1,5 @@
 run notepad -back
 run runTest.bat
-run C:\Windows\system32\Taskmgr.exe -back
+run C:\Windows\system32\control.exe -back
 time countdown -back
 process list

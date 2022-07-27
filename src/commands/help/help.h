@@ -103,7 +103,7 @@ void getHelpCmd(string s)
   else if (!s.compare("game"))
   {
     cout << "Usage:\n";
-    cout << format("  game", 15) << "Play The Impossible Tic Tac Toe\n\n";
+    cout << format("  game", 15) << "Play The Impossible Tic Tac Toe with mode\n\n";
     cout << "Options:\n";
     cout << "[-fore|-f][-back|b]\n[-h|help]\n\n";
   }
