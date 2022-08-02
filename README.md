@@ -50,7 +50,7 @@
 - Working with process: Create, Stop, Resume and Kill Processes with Foreground and Background Mode
 - Working with Directory Path
 - Working with environment variables
-- Open Notepad, Calculator, executable/batch files, etc
+- Open Notepad, Calculator, executable/batch/text files, etc
 
 <h2 id="Contributors">Contributors</h2>
 
