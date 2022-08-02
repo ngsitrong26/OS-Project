@@ -79,6 +79,7 @@ void kill(string s)
           si[j] = si[j + 1];
           cString[j] = cString[j + 1];
         }
+        i--;
         n--;
         isNotExist = 0;
       }
