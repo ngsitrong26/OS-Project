@@ -132,7 +132,7 @@ process [list|l]
 Stop a running process
 
 ```txt
-process [stop|s] <Id>
+process [stop|s] <Id/Name>
 ```
 
 #### 3. Resume
@@ -140,7 +140,7 @@ process [stop|s] <Id>
 Resume a stopped process
 
 ```txt
-process [resume|r] <Id>
+process [resume|r] <Id/Name>
 ```
 
 #### 4. Kill
@@ -148,7 +148,7 @@ process [resume|r] <Id>
 Kill a process:
 
 ```txt
-process [kill|k] <Id>
+process [kill|k] <Id/Name>
 ```
 
 To kill all processes:
