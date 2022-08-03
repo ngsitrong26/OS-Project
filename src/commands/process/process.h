@@ -383,7 +383,7 @@ void run(string *cmd)
     cout << "[-fore|-f][-back|-b]\n[-h|-help]\n\n";
     cout << "aliases: r\n\n";
   }
-  else if (!cmd[1].compare(cmd[1].length() - 4, 4, ".exe"))
+  else if (cmd[1].length() > 4 && !cmd[1].compare(cmd[1].length() - 4, 4, ".exe"))
   {
     if (!cmd[2].empty())
     {
@@ -395,7 +395,7 @@ void run(string *cmd)
       cout << "To see a list of supported commands, run:\n  run -help\n\n";
     }
   }
-  else if (!cmd[1].compare(cmd[1].length() - 4, 4, ".bat"))
+  else if (cmd[1].length() > 4 && !cmd[1].compare(cmd[1].length() - 4, 4, ".bat"))
   {
     if (cmd[2].empty())
     {
@@ -407,7 +407,7 @@ void run(string *cmd)
       cout << "To see a list of supported commands, run:\n  run -help\n\n";
     }
   }
-  else if (!cmd[1].compare(cmd[1].length() - 4, 4, ".txt"))
+  else if (cmd[1].length() > 4 && !cmd[1].compare(cmd[1].length() - 4, 4, ".txt"))
   {
     if (cmd[2].empty())
     {
@@ -421,8 +421,26 @@ void run(string *cmd)
   }
   else
   {
-    cout << "Unknown command: " << cmd[1] << endl;
-    cout << "To see a list of supported commands, run:\n  run -help\n\n";
+    HKEY hKey;
+    BYTE value[10000];
+    DWORD valSize = sizeof(value);
+    RegOpenKeyEx(HKEY_CURRENT_USER, "Environment", 0, KEY_ALL_ACCESS, &hKey);
+    if (RegQueryValueEx(hKey, cmd[1].c_str(), NULL, NULL, value, &valSize) == 0)
+    {
+      string name(reinterpret_cast<char *>(value));
+      if (!cmd[2].compare("-fore") || !cmd[2].compare("-f"))
+        fore(name);
+      else if (!cmd[2].compare("-back") || !cmd[2].compare("-b"))
+        back(name);
+      else
+        cout << "Invalid mode, use [-fore|-f] for foreground and [-back|-b] for background\n\n";
+    }
+    else
+    {
+      cout << "Unknown command: " << cmd[1] << endl;
+      cout << "To see a list of supported commands, run:\n  run -help\n\n";
+    }
+    RegCloseKey(hKey);
   }
 }
 
