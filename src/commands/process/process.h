@@ -139,6 +139,10 @@ void stop(string s)
         }
       }
     }
+    if (isNotExist)
+    {
+      cout << "No process with id or name equals \"" << s << "\"\n\n";
+    }
   }
   catch (exception &e)
   {
@@ -161,10 +165,6 @@ void stop(string s)
       cout << "All process with name \"" << s << "\" stopped.\n\n";
     else
       cout << "Process \"" << s << "\" is already stopped or does not exist.\n\n";
-  }
-  if (isNotExist)
-  {
-    cout << "No process with id or name equals \"" << s << "\"\n\n";
   }
 }
 
@@ -194,6 +194,10 @@ void resume(string s)
         }
       }
     }
+    if (isNotExist)
+    {
+      cout << "No process with id or name equals \"" << s << "\"\n\n";
+    }
   }
   catch (exception &e)
   {
@@ -216,10 +220,6 @@ void resume(string s)
       cout << "All process with name \"" << s << "\" resumed successfully.\n\n";
     else
       cout << "Process \"" << s << "\" is still running or does not exist.\n\n";
-  }
-  if (isNotExist)
-  {
-    cout << "No process with id or name equals \"" << s << "\"\n\n";
   }
 }
 

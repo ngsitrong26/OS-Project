@@ -72,7 +72,7 @@ void envDel(string name)
 {
   HKEY hKey;
   RegOpenKeyEx(HKEY_CURRENT_USER, "Environment", 0, KEY_ALL_ACCESS, &hKey);
-  if (RegDeleteValue(hKey, name.c_str()))
+  if (RegDeleteValue(hKey, name.c_str()) == ERROR_SUCCESS)
   {
     cout << "The environment variable " << name << " is deleted\n\n";
   }
