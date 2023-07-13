@@ -11,7 +11,7 @@ void tiny(string *input)
     cout << "To see a list of supported commands, run:\n  help\n\n";
   }
   else if (input[1].empty())
-    ShellExecute(0, 0, "https://github.com/Asphode1/TinyShell", 0, 0, SW_SHOW);
+    ShellExecute(0, 0, "https://github.com/ngsitrong26/OS-Project", 0, 0, SW_SHOW);
   else if (!input[1].compare("-h") || !input[1].compare("-help"))
   {
     cout << "\nUsage:\n";

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id=#top></div>
 <div  id="TinyShell" align="center">
   <a href="https://github.com/Asphode1/TinyShell">
@@ -312,3 +313,6 @@ _Example:_ using g++
 Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](mailto:kien.mai191618@gmail.com)<br>
 Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
 <p align="right">(<a href="#top">back to top</a>)</p>
+=======
+# OS-Project
+>>>>>>> 2250990f5858ff6f3dd780038a9a5afef7392f50

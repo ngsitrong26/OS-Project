@@ -107,6 +107,15 @@ void getHelpCmd(string s)
     cout << "Options:\n";
     cout << "[-fore|-f][-back|b]\n[-h|help]\n\n";
   }
+  else if(!s.compare("file"))
+  {
+    cout << "Usage:\n";
+    cout << format("  file [mkdir|mk] [name]", 25) << "Create new file\n";
+    cout << format("  file [cp]", 25) << "Copy file to file\n";
+    cout << format("  file [rm]", 25) << "Delete file\n";
+    cout << "Options:\n";
+    cout << "[-h|-help]\n\n";
+  }
   else
   {
     cout << "Unknown command: \"" << s << "\"\n\n";
@@ -116,7 +125,7 @@ void getHelpCmd(string s)
 
 string findCmd(string s)
 {
-  string ss[12][3] = {
+  string ss[13][3] = {
       {"help", "h"},
       {"cd"},
       {"cls"},
@@ -128,8 +137,9 @@ string findCmd(string s)
       {"exit", "e"},
       {"tiny"},
       {"run", "r"},
-      {"game"}};
-  for (int i = 0; i < 12; i++)
+      {"game"},
+      {"file"}};
+  for (int i = 0; i < 13; i++)
   {
     int j = 0;
     while (!ss[i][j].empty() && j < 3)
@@ -157,6 +167,7 @@ void help(string *inputString)
   cmds.insert(std::pair<string, string>("exit", "Exit TinyShell"));
   cmds.insert(std::pair<string, string>("tiny", "More information about Tiny Shell on GitHub"));
   cmds.insert(std::pair<string, string>("run", "Run executable/batch file"));
+  cmds.insert(std::pair<string, string>("file", "File operations"));
   cmds.insert(std::pair<string, string>("game", "Play The Impossible Tic Tac Toe"));
   if (inputString[1].empty())
   {

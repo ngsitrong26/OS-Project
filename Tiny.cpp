@@ -8,6 +8,7 @@
 #include "src/commands/time/time.h"
 #include "src/commands/env/env.h"
 #include "tic_tac_toe/game.h"
+#include "src/commands/file/file.h"
 using std::cin;
 using std::stringstream;
 using std::time_t;
@@ -41,8 +42,8 @@ void greed()
   cout << "                                   \\/__/" << endl;
   cout << "\nTiny Shell";
   setConsoleColor(FOREGROUND_WHITE);
-  cout << " by KLL Team\n";
-  cout << "For more information, please visit https://github.com/Asphode1/TinyShell\n";
+  cout << " by TMQ Team\n";
+  cout << "For more information, please visit https://github.com/ngsitrong26/OS-Project\n";
   cout << "Type \"help\" to show list of commands and their usage.\n";
   printTime();
 }
@@ -95,6 +96,10 @@ void start(string *input)
   {
     game(input);
   }
+  else if (!cmd.compare("file"))
+  {
+    file(input);
+  }
   else
   {
     cout << "Unknown command: \"" << *input << "\"\n\n";
@@ -123,6 +128,7 @@ int main()
       setConsoleColor(FOREGROUND_WHITE);
       cout << "!\n\n";
       sleep(1);
+      killAll();
       break;
     }
     else if (!input.compare("history"))
