@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <div id=#top></div>
 <div  id="TinyShell" align="center">
-  <a href="https://github.com/Asphode1/TinyShell">
+  <a href="https://github.com/ngsitrong26/OS-Project">
     <img src="src/img/TinyShell.png">
   </a>
   <h2 id="Welcome"> <em>Welcome to our TinyShell</em></h2>
@@ -55,11 +55,11 @@
 
 <h2 id="Contributors">Contributors</h2>
 
-This program is created by 3 Students of Talented in Computer Science - K65, HUST
+This program is created by 3 Students of Talented in Computer Science - K66, HUST
 
-- [Hồ Viết Đức Lương](mailto:luong.hvd200376@sis.hust.edu.vn)
-- [Nguyễn Duy Long](mailto:long.nd204580@sis.hust.edu.vn)
-- [Mai Trung Kiên](mailto:kien.mt200301@sis.hust.edu.vn)
+- [Nguyễn Sỹ Trọng](mailto:trong.ns210866@sis.hust.edu.vn)
+- [Vương Đình Minh](mailto:minh.vd210610@sis.hust.edu.vn)
+- [Nguyễn Minh Quang](mailto:quang.nm215461@sis.hust.edu.vn)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <h2 id="Start">Getting Started</h2>
@@ -74,7 +74,7 @@ To run this program, download this repository from Github.
 If you have [Git](https://git-scm.com/) installed, you can clone this repository to your machine:
 
 ```txt
-git clone https://github.com/Asphode1/TinyShell.git
+git clone https://github.com/ngsitrong26/OS-Project
 cd TinyShell
 ```
 
@@ -310,8 +310,8 @@ _Example:_ using g++
 
 <h2 id="Contact"> Contact</h2>
 
-Mai Trung Kiên - [Outlook](mailto:kien.mt200301@sis.hust.edu.vn) - [Email](mailto:kien.mai191618@gmail.com)<br>
-Project link: [https://github.com/Asphode1/TinyShell](https://github.com/Asphode1/TinyShell)
+Nguyễn Sỹ Trọng - [Outlook](mailto:trong.ns210866@sis.hust.edu.vn) <br>
+Project link: [https://github.com/ngsitrong26/OS-Project](https://github.com/ngsitrong26/OS-Project)
 <p align="right">(<a href="#top">back to top</a>)</p>
 =======
 # OS-Project
